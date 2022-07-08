@@ -23,8 +23,12 @@
         </li> -->
       </ul>
       <div class="d-flex">
-        <button class="btn btn-primary rounded-pill me-1 px-4">Login</button>
-        <button class="btn btn-outline-primary rounded-pill">Register</button>
+        <a href="/login">
+          <button class="btn btn-primary rounded-pill me-1 px-4">Login</button>
+        </a>
+        <a href="/register">
+          <button class="btn btn-outline-primary rounded-pill">Register</button>
+        </a>
       </div>
     </div>
   </div>
@@ -38,7 +42,9 @@
         <h1 class="fw-bold">Your <span class="text-primary">busy</span> life deserve this.</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolore totam mollitia, placeat aliquam dolorum amet.</p>
         <div class="mt-4">
-          <button class="btn btn-primary rounded-pill shadow">Get started - it's Free</button>
+          <a href="/register">
+            <button class="btn btn-primary rounded-pill shadow">Get started - it's Free</button>
+          </a>
         </div>
       </div>
       <div class="col-md-6"></div>
@@ -85,7 +91,9 @@
         <div class="d-flex flex-column justify-content-center align-items-center h-100">
           <h1>Let's get started</h1>
           <p class="mb-5">From now on, Everything is free </p>
-          <button class="btn btn-primary rounded-pill">Register now!</button>
+          <a href="/register">
+            <button class="btn btn-primary rounded-pill">Register now!</button>
+          </a>
         </div>
       </div>
   </div>
