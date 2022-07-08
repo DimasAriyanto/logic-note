@@ -1,0 +1,33 @@
+.hero {
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.hero h1 {
+    font-size: 58px;
+}
+
+.hero p {
+    font-size: 22px;
+}
+
+.section2 {
+    height: 100vh;
+}
+
+.section2 h1 {
+    font-size: 34px;
+}
+
+.section2 p {
+    font-size: 22px;
+}
+
+.reg-yuk {
+    height: 75vh;
+    background-color: whitesmoke;;
+}
+
+.footer {
+    height: 25vh;
+}
