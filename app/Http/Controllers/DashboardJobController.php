@@ -42,7 +42,7 @@ class DashboardJobController extends Controller
     {
         $validateData = $request->validate([
             'title' => 'required|max:255',
-            'deskripsi' => 'required'
+            'deskripsi' => ''
         ]);
 
         $validateData['id_user'] = auth()->user()->id;

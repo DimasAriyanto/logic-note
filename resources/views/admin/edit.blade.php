@@ -9,55 +9,14 @@
                     <h1 class="h2">Edit Job</h1>
                 </div>
                 <div class="col-lg-8">
-                    <form action="/dashboard/{{ $job->id }}" method="post" class="mb-5"
-                        enctype="multipart/form-data">
+                    <form action="/dashboard/{{ $job->id }}" method="post" class="mb-5" enctype="multipart/form-data">
                         @method('put')
                         @csrf
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                                name="title" required autofocus value="{{ old('title', $post->title) }}">
+                                name="title" required autofocus value="{{ old('title', $job->title) }}">
                             @error('title')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="mb-3">
-                            <label for="slug" class="form-label">Slug</label>
-                            <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug"
-                                name="slug" required value="{{ old('slug', $post->slug) }}">
-                            @error('slug')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="mb-3">
-                            <label for="category" class="form-label">Category</label>
-                            <select class="form-select" name="category_id">
-                                @foreach ($categories as $category)
-                                    @if (old('category_id', $post->category_id))
-                                        == $category->id
-                                        <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                                    @else
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endif
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="image">Post Image</label>
-                            <input type="hidden" name="oldImage" value="{{ $post->image }}">
-                            @if ($post->image)
-                                <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->slug }}"
-                                    class="img-preview img-fluid mb-3 col-sm-5 d-block">
-                            @else
-                                <img class="img-preview img-fluid">
-                            @endif
-                            <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
-                                name="image" onchange="priviewImage()">
-                            @error('image')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
@@ -68,21 +27,12 @@
                             @error('body')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
-                            <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
+                            <input id="body" type="hidden" name="body"
+                                value="{{ old('deskripsi', $job->deskripsi) }}">
                             <trix-editor input="body"></trix-editor>
                         </div>
-                        <button type="submit" class="btn btn-primary">Update Post</button>
+                        <button type="submit" class="btn btn-primary">Update Job</button>
                     </form>
-                    <script>
-                        const title = document.querySelector('#title');
-                        const slug = document.querySelector('#slug');
-
-                        title.addEventListener('change', function() {
-                            fetch('/dashboard/blog/checkSlug?title=' + title.value)
-                                .then(response => response.json())
-                                .then(data => slug.value = data.slug)
-                        });
-                    </script>
                 </div>
             </main>
         </div>

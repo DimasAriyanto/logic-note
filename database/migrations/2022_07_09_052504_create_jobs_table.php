@@ -15,10 +15,10 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('id_user');
             $table->string('title');
             // $table->enum('status');
-            $table->dateTime('waktu');
+            // $table->dateTime('waktu');
             $table->text('deskripsi');
             $table->timestamps();
         });

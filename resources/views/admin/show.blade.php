@@ -22,12 +22,6 @@
                                 onclick="return confirm('Are you sure you want to delete')"><span
                                     data-feather="x-circle"></span>Delete</button>
                         </form>
-                        @if ($post->image)
-                            <img src="{{ asset('storage/') . $post->image }}" class="img-fluid"
-                                alt="{{ $post->category->name }}">
-                        @else
-                            <img src="https://source.unsplash.com/1200x400?programming" alt="{{ $post->category->name }}">
-                        @endif
                         <article class="my-3 fs-5">
                             {!! $post->body !!}
                         </article>
