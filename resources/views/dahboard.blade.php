@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body class="d-flex justify-content-center align-items-center">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
         <div class="container py-2">
             <div class="d-flex">
@@ -32,9 +31,9 @@
                             <!-- <i class="bi bi-three-dots"></i> -->
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Setting</a></li>
                             <li>
-                                <a class="dropdown-item text-danger" href="#">
+                                <a class="dropdown-item text-danger" href="/">
                                     <i class="bi bi-box-arrow-left me-1"></i> Logout
                                 </a>
                             </li>
@@ -54,7 +53,7 @@
     </nav>
 
     <div class="d-flex flex-column justify-content-center align-items-center task-section">
-        <div class="w-50 shadow">
+        <div class="w-100 shadow">
             <div class="container px-5 pt-5">
                 <div class="today mb-3">
                     <h6 class="mb-3">Today</h6>
@@ -222,8 +221,6 @@
             </div>
         </div>
     </div>
-
-
 
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
