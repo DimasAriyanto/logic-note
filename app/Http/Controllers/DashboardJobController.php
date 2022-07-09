@@ -42,10 +42,10 @@ class DashboardJobController extends Controller
     {
         $validateData = $request->validate([
             'title' => 'required|max:255',
-            'body' => 'required'
+            'deskripsi' => 'required'
         ]);
 
-        $validateData['user_id'] = auth()->user()->id;
+        $validateData['id_user'] = auth()->user()->id;
 
         Job::create($validateData);
 
@@ -89,12 +89,12 @@ class DashboardJobController extends Controller
     {
         $rules = [
             'title' => 'required|max:255',
-            'body' => 'required'
+            'deskripsi' => 'required'
         ];
 
         $validateData = $request->validate($rules);
 
-        $validateData['user_id'] = auth()->user()->id;
+        $validateData['id_user'] = auth()->user()->id;
 
         Job::where('id', $job->id)->update($validateData);
 

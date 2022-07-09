@@ -33,8 +33,8 @@
                     </li>
                 </ul>
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h5 class="lh-1 mb-1">Monday</h5>
-                    <p class="lh-1 mb-0 text-secondary">13 Dec 2002</p>
+                    <h5 class="lh-1 mb-1">{{ date('D') }}</h5>
+                    <p class="lh-1 mb-0 text-secondary">{{ date('Y-m-d H:i:s') }}</p>
                 </div>
             </div>
         </div>

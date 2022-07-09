@@ -19,7 +19,7 @@ class CreateJobsTable extends Migration
             $table->string('title');
             // $table->enum('status');
             $table->dateTime('waktu');
-            $table->text('body');
+            $table->text('deskripsi');
             $table->timestamps();
         });
     }

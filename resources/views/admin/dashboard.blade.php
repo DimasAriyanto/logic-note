@@ -28,7 +28,7 @@
                             <!-- list child -->
                         @endforeach
                         <div class="adding-task-section w-100 py-3 shadow-lg px-5">
-                            <form class="d-flex w-100" action="#">
+                            <form class="d-flex w-100" action="/dashboard/create">
                                 <div class="w-100">
                                     <input type="text" class="form-control rounded-pill px-3"
                                         placeholder="click to quickly adding task">
