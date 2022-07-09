@@ -10,7 +10,7 @@
                     @csrf
                     <div class="mb-3">
                         <label class="form-label" for="name">Full Name</label>
-                        <input type="name" name="name " class="form-control @error('name') is-invalid @enderror"
+                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
                             placeholder="Full Name" id="name" value="{{ old('name') }}">
                         @error('name')
                             <div id="validationServerUsernameFeedback" class="invalid-feedback">
