@@ -1,39 +1,24 @@
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-        <div class="container py-2">
+<nav class="navbar shadow navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container py-2">
+        <a class="navbar-brand fw-bold" href="#">Logic-note</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li> -->
+            </ul>
             <div class="d-flex">
-                <p class="d-flex justify-content-center align-items-center mb-0">Good Morning, </p>
-                <a class="navbar-brand fw-bold ms-1 me-0" href="#">Dhaniar Febrin</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex justify-content-center align-items-center" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <!-- <i class="bi bi-three-dots"></i> -->
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
-                            <li>
-                                <a class="dropdown-item text-danger" href="#">
-                                    <i class="bi bi-box-arrow-left me-1"></i> Logout
-                                </a>
-                            </li>
-                            <!-- <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                        </ul>
-                    </li>
-                </ul>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h5 class="lh-1 mb-1">Monday</h5>
-                    <p class="lh-1 mb-0 text-secondary">13 Dec 2002</p>
-                </div>
+                <a href="/login">
+                    <button class="btn btn-primary rounded-pill me-1 px-4">Login</button>
+                </a>
+                <a href="/register">
+                    <button class="btn btn-outline-primary rounded-pill">Register</button>
+                </a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>

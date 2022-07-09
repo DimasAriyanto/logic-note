@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTugasTable extends Migration
+class CreateJobsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateTugasTable extends Migration
      */
     public function up()
     {
-        Schema::create('tugas', function (Blueprint $table) {
+        Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_user');
-            $table->string('nama_tugas');
+            $table->foreignId('user_id');
+            $table->string('title');
             // $table->enum('status');
             $table->dateTime('waktu');
-            $table->teks('deskripsi');
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateTugasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tugas');
+        Schema::dropIfExists('jobs');
     }
 }

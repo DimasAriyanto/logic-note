@@ -18,15 +18,15 @@ class RegisterController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required|max:255',
-            'username' => 'required|min:4|max:255|unique:users',
             'email' => 'required|email:dns|unique:users',
-            'password' => 'required|min:8|max:255'
+            'password' => 'required|min:8|max:255',
+            'phone' => 'required|min:8|max:11|regex:/^([0-9\s\-\+\(\)]*)$/'
         ]);
 
         $validateData['password'] = Hash::make($validateData['password']);
 
         User::create($validateData);
-        $request->session()->flash('success', 'Register Successfull!Please Login');
+        $request->session()->flash('success', 'Register Successfull! Please Login');
 
         return redirect('/login');
     }

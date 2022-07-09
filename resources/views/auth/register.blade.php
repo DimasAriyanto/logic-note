@@ -1,20 +1,7 @@
-<!doctype html>
-<html lang="en">
+@extends('auth.layout.index')
+@section('title', 'Register')
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
-
-    <title>Register Logic Note</title>
-</head>
-
-<body>
+@section('main')
     <div class="container">
         <div class="card register-form shadow">
             <div class="card-body py-5">
@@ -22,20 +9,45 @@
                 <form action="/register" method="post">
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-control" placeholder="Full Name">
+                        <label class="form-label" for="name">Full Name</label>
+                        <input type="name" name="name " class="form-control @error('name') is-invalid @enderror"
+                            placeholder="Full Name" id="name" value="{{ old('name') }}">
+                        @error('name')
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="text" class="form-control" placeholder="Enter Your Email">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                            id="email" placeholder="name@example.com" value="{{ old('email') }}">
+                        @error('email')
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Create Password</label>
-                        <input type="text" class="form-control" placeholder="Create Password">
+                        <label class="form-label" for="password"> Create Password</label>
+                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
+                            id="password" placeholder="Password">
+                        @error('password')
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Phone Number</label>
-                        <input type="number" class="form-control rounded-pill" placeholder="Phone Number">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="number" name="phone"
+                            class="form-control rounded-pill @error('phone') is-invalid @enderror" id="phone"
+                            placeholder="Phone Number">
+                        @error('phone')
+                            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="d-grid mt-5">
                         <button type="submit" class="btn btn-primary btn-submit">Register</button>
@@ -44,11 +56,8 @@
             </div>
         </div>
     </div>
+@endsection
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-</body>
-
-</html>
+@section('footer')
+    @include('auth.layout.footer')
+@endsection
