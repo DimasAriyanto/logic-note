@@ -11,7 +11,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="name">Full Name</label>
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                            placeholder="Full Name" id="name" value="{{ old('name') }}">
+                            placeholder="Full Name" required id="name" value="{{ old('name') }}">
                         @error('name')
                             <div id="validationServerUsernameFeedback" class="invalid-feedback">
                                 {{ $message }}
@@ -21,7 +21,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="email">Email</label>
                         <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                            id="email" placeholder="name@example.com" value="{{ old('email') }}">
+                            placeholder="name@example.com" required id="email" value="{{ old('email') }}">
                         @error('email')
                             <div id="validationServerUsernameFeedback" class="invalid-feedback">
                                 {{ $message }}
@@ -31,7 +31,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="password"> Create Password</label>
                         <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                            id="password" placeholder="Password">
+                            placeholder="Password" required id="password">
                         @error('password')
                             <div id="validationServerUsernameFeedback" class="invalid-feedback">
                                 {{ $message }}
@@ -40,9 +40,8 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="phone">Phone Number</label>
-                        <input type="number" name="phone"
-                            class="form-control rounded-pill @error('phone') is-invalid @enderror" id="phone"
-                            placeholder="Phone Number">
+                        <input type="number" name="phone" class="form-control @error('phone') is-invalid @enderror"
+                            placeholder="Phone Number" required id="phone">
                         @error('phone')
                             <div id="validationServerUsernameFeedback" class="invalid-feedback">
                                 {{ $message }}
