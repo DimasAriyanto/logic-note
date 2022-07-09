@@ -18,7 +18,7 @@ class DashboardJobController extends Controller
     {
         // return Job::all();
         return view('admin.dashboard', [
-            'jobs' => Job::where('user_id', auth()->user()->id)->get()
+            'jobs' => Job::where('id_user', auth()->user()->id)->get()
         ]);
     }
 
