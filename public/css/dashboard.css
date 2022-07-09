@@ -1,0 +1,56 @@
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    border: 7px;
+}
+
+div.task-section {
+    margin-top: 18vh;
+}
+
+div.task-section > div {
+    min-height: 75vh;
+    max-height: 75vh;
+    min-width: 375px;
+    border-radius: 20px;
+    overflow-y: hidden;
+}
+
+div.task-section > div > div.container {
+    overflow-y: scroll;
+    max-height: 65vh;
+}
+
+div.task-section h6 {
+    font-weight: 600;
+}
+
+div.task-section .task-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.task-section .task-list > div {
+    width: 100%;
+}
+
+div.task-list-child {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    transition: .2s;
+}
+
+div.task-list-child:hover {
+    background-color: whitesmoke;
+    cursor: default;
+    transition: .2s;
+}
+
+div.adding-task-section {
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+}
